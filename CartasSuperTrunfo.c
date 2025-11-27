@@ -53,7 +53,7 @@ int main (){
     printf("populacao: %d\n", pop1);
     printf("area: %.2f\n", area1);
     printf("pib: %.2f\n", pib1);
-    printf("pontos turisticos %d\n",npt1);
+    printf("pontos turisticos %d\n\n",npt1);
 
      printf("=======carta-2=======\n"); //saida da segunda carta
     printf("estado: %s\n", estado2);
