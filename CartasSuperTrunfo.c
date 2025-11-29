@@ -1,5 +1,7 @@
+
 #include <stdio.h>
-int main (){
+int main ()
+{
     char estado1[50], cidade1[50], cod1[50], estado2[50], cidade2[50], cod2[50];
     int pop1, pop2, npt1, npt2;
     float pib1, pib2, area1, area2;
@@ -51,18 +53,21 @@ int main (){
     printf("codigo: %s\n", cod1);
     printf("nome da cidade: %s\n", cidade1);
     printf("populacao: %d\n", pop1);
-    printf("area: %.2f\n", area1);
-    printf("pib: %.2f\n", pib1);
-    printf("pontos turisticos %d\n\n",npt1);
+    printf("area: %.2f km2\n", area1);
+    printf("pib: %.2f bilhoes de reais\n", pib1);
+    printf("pontos turisticos %d\n",npt1);
+    printf("densidade populacional: %.2f hab/km2\n", pop1/area1);
+    printf("pib per capita: %.2f reais\n", pib1/pop1);
 
-     printf("=======carta-2=======\n"); //saida da segunda carta
+    printf("=======carta-2=======\n"); //saida da segunda carta
     printf("estado: %s\n", estado2);
     printf("codigo: %s\n", cod2);
     printf("nome da cidade: %s\n", cidade2);
     printf("populacao: %d\n", pop2);
-    printf("area: %.2f\n", area2);
-    printf("pib: %.2f\n", pib2);
+    printf("area: %.2f km2\n", area2);
+    printf("pib: %.2f bilhoes de reais\n", pib2);
     printf("pontos turisticos %d\n",npt2);
+    printf("densidade populacional: %.2f hab/km2\n", pop2/area2);
+    printf("pib per capita: %.2f reais\n", pib2/pop2);
     return(0);
-
-} 
+}
