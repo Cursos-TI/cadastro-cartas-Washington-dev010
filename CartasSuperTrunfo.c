@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 int main ()
 {
@@ -69,5 +68,39 @@ int main ()
     printf("pontos turisticos %d\n",npt2);
     printf("densidade populacional: %.2f hab/km2\n", pop2/area2);
     printf("pib per capita: %.2f reais\n", pib2/pop2);
+
+    int carta1 = 0, carta2 = 0;
+    printf("=======comparacao_das_cartas=======\n"); //saida do comparativo entre as duas cartas
+    if (pop1>pop2)
+    printf("populacao: carta 1 venceu (1)\n", carta1++);
+    else if (pop2>pop1)
+    printf("populacao: carta 2 venceu (0)\n", carta2++);
+    if (area1>area2)
+    printf("area: carta 1 venceu (1)\n", carta1++);
+    else if (area2>area1)
+    printf("area: carta 2 venceu (0)\n", carta2++);
+    if (pib1>pib2)
+    printf("PIB: carta 1 venceu (1)\n", carta1++);
+    else if (pib2>pib1)
+    printf("PIB: carta 2 venceu (0)\n", carta2++);
+    if (npt1>npt2)
+    printf("pontos turisticos: carta 1 venceu (1)\n", carta1++);
+    else if (npt2>npt1)
+    printf("pontos turisticos: carta 2 venceu (0)\n", carta2++);
+    if ((pop1/area1)>(pop2/area2))
+    printf("densidade populacional: carta 1 venceu (1)\n", carta1++);
+    else if ((pop2/area2)>(pop1/area1))
+    printf("densidade populacional: carta 2 venceu (0)\n", carta2++);
+    if ((pib1/pop1)>(pib2/pop2))
+    printf("PIB per capita: carta 1 venceu (1)\n", carta1++);
+    else if ((pib2/pop2)>(pib1/pop1))
+    printf("PIB per capita: carta 2 venceu (0)\n", carta2++);
+    float super_poder1 = (float)(pop1+npt1+area1+pib1)/(float)(pop1/area1);
+    float super_poder2 = (float)(pop2+npt2+area2+pib2)/(float)(pop2/area2);
+    if (super_poder1>super_poder2)
+    printf("super poder: carta 1 venceu (1)\n", carta1++);
+    else if (super_poder2>super_poder1)
+    printf("super poder: carta 2 venceu (0)\n", carta2++);
+    printf("resultado final: carta 1 (%d) x carta 2 (%d)\n", carta1, carta2);
     return(0);
 }
